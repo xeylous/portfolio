@@ -1,46 +1,147 @@
-// components/Hero.jsx
 "use client";
-
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import Lottie from "lottie-react";
+import { Typewriter } from "react-simple-typewriter";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaInstagram,
+  FaEnvelope,
+} from "react-icons/fa";
+import devAnimation from "../../public/animation.json";
 
 export default function Hero() {
-  return (
-    <section className="flex flex-col items-center justify-center min-h-screen text-center bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white px-6">
-      <motion.h1
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-5xl md:text-6xl font-bold mb-4"
-      >
-        Hi, I’m <span className="text-indigo-400">Xeylous</span>
-      </motion.h1>
+  const [colorIndex, setColorIndex] = useState(0);
+  const [index, setIndex] = useState(0);
+  const names = ["Apurv Sinha", "Xeylous"];
 
-      <motion.p
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % names.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const colors = [
+    "text-pink-600", // Computer Science Student
+    "text-blue-600", // Web Developer
+    "text-green-600", // Blockchain Enthusiast
+  ];
+
+  const words = [
+    "Computer Science Student",
+    "Web Developer",
+    "Blockchain Enthusiast",
+  ];
+
+  const variants = {
+    hidden: { y: -100, opacity: 0, rotateX: 90 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      rotateX: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+    exit: { y: 100, opacity: 0, rotateX: -90, transition: { duration: 0.8 } },
+  };
+
+  return (
+    <section
+      id="home"
+      className="flex flex-col-reverse md:flex-row items-center justify-between px-6 py-10 bg-white"
+    >
+      {/* Left Side (Text) */}
+      <div className="flex-1 text-center md:text-left mt-10 md:mt-0 md:ml-10 ">
+        {/* Name */}
+        <div className="sm:flex sm:justify-center md:justify-start lg:justify-start  h-22 overflow-hidden  ">
+          <motion.div
+            key={index}
+            initial={{ y: "-100%" }}
+            animate={{ y: 0 }}
+            exit={{ y: "100%" }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            className="text-4xl sm:text-6xl lg:text-7xl  font-extrabold text-zinc-900"
+          >
+            {names[index]}
+          </motion.div>
+        </div>
+
+        {/* Typewriter */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-2xl sm:text-3xl text-zinc-700  flex justify-center md:justify-start flex-wrap"
+        >
+          <span className="mr-2">A passionate</span>
+          <span className={colors[colorIndex]}>
+            <Typewriter
+              words={words}
+              loop={true}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1500}
+              onType={(count) => setColorIndex(count % words.length)}
+            />
+          </span>
+        </motion.div>
+
+        {/* Tagline */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 1 }}
+          className="mt-3 text-sm sm:text-base md:text-lg italic text-zinc-900"
+          style={{ fontFamily: "'Playwrite CA', cursive" }}
+        >
+          Turning ideas into reality, one line of code at a time.
+        </motion.p>
+        {/* Social Media Icons */}
+        <div className="flex justify-center md:justify-start mt-6 space-x-5 text-3xl">
+          <Link href="https://github.com/xeylous" target="_blank">
+            <FaGithub className="text-gray-600 hover:text-black transition duration-300" />
+          </Link>
+          <Link href="https://linkedin.com/in/yourusername" target="_blank">
+            <FaLinkedin className="text-gray-600 hover:text-blue-800 transition duration-300" />
+          </Link>
+          <Link href="https://twitter.com/xeylous" target="_blank">
+            <FaTwitter className="text-gray-600 hover:text-sky-700 transition duration-300" />
+          </Link>
+          <Link href="https://instagram.com/yourusername" target="_blank">
+            <FaInstagram className="text-gray-600 hover:text-pink-700 transition duration-300" />
+          </Link>
+          <Link href="mailto:your@email.com">
+            <FaEnvelope className="text-gray-600 hover:text-red-700 transition duration-300" />
+          </Link>
+        </div>
+
+        {/*Resume button */}
+      <motion.a
+        href="/resume.pdf" // 👉 replace with your actual resume link or file
+        download
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3, duration: 0.8 }}
-        className="text-lg md:text-xl max-w-2xl mb-8 text-gray-300"
+        transition={{ delay: 1, duration: 0.8 }}
+        className="inline-block mt-6 px-6 py-3 rounded-2xl bg-zinc-600 text-white font-semibold shadow-md hover:bg-zinc-800 hover:shadow-lg transition-all duration-300"
+        style={{ fontFamily: "'Playwrite CA', cursive" }}
       >
-        A Computer Science student passionate about{" "}
-        <span className="text-indigo-400">Web Development</span> &{" "}
-        <span className="text-indigo-400">Blockchain</span>. I love building
-        modern apps with Next.js, React, and MERN.
-      </motion.p>
+        Resume Here
+      </motion.a>
+      </div>
+      
 
-      <div className="flex gap-4">
-        <Link
-          href="#projects"
-          className="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 rounded-xl shadow-md transition"
-        >
-          View Projects
-        </Link>
-        <Link
-          href="#contact"
-          className="px-6 py-3 bg-gray-700 hover:bg-gray-600 rounded-xl shadow-md transition"
-        >
-          Contact Me
-        </Link>
+      {/* Right Side (Animation) */}
+      <div className="flex-1 flex justify-center items-center h-[18rem] sm:h-[22rem] md:h-[26rem] lg:h-[30rem]">
+        <Lottie
+          animationData={devAnimation}
+          loop={true}
+          className="w-[220px] sm:w-[280px] md:w-[350px] lg:w-[460px] xl:w-[520px]"
+        />
       </div>
     </section>
   );

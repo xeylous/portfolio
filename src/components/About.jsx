@@ -1,4 +1,3 @@
-// components/About.jsx
 "use client";
 
 import { motion } from "framer-motion";
@@ -7,32 +6,35 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center bg-black text-white px-6 py-20"
+      className="min-h-screen flex flex-col items-center justify-center text-center px-6 bg-zinc-900 text-white"
     >
-      <div className="max-w-4xl mx-auto text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl font-bold mb-6"
-        >
-          About <span className="text-indigo-400">Me</span>
-        </motion.h2>
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="text-4xl md:text-5xl font-bold mb-6"
+      >
+        About Me
+      </motion.h2>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-lg text-gray-300 leading-relaxed"
-        >
-          I’m <span className="text-indigo-400">Apurv Sinha</span>, a Computer
-          Science student who loves building modern web apps and exploring{" "}
-          <span className="text-indigo-400">Blockchain</span>. Skilled in
-          Next.js, React, and MERN stack, I focus on creating{" "}
-          <span className="text-indigo-400">aesthetic & functional</span>{" "}
-          solutions for the web.
-        </motion.p>
-      </div>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3, duration: 0.8 }}
+        className="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed"
+      >
+        Hi 👋 I’m <span className="font-semibold text-white">Apurv Sinha</span>, 
+        a passionate developer focused on building{" "}
+        <span className="text-sky-400">modern web</span> and{" "}
+        <span className="text-sky-400">blockchain solutions</span>.  
+        I enjoy crafting clean, efficient, and scalable applications with 
+        <span className="font-semibold"> Next.js</span>, 
+        <span className="font-semibold"> React</span>, 
+        <span className="font-semibold"> Tailwind CSS</span>, and 
+        <span className="font-semibold"> Solidity</span>.
+      </motion.p>
     </section>
   );
 }
