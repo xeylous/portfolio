@@ -56,7 +56,7 @@ export default function Hero() {
       {/* Left Side (Text) */}
       <div className="flex-1 text-center md:text-left mt-10 md:mt-0 md:ml-10 ">
         {/* Name */}
-        <div className="sm:flex sm:justify-center md:justify-start lg:justify-start  h-22 overflow-hidden  ">
+        <div className="sm:flex sm:justify-center md:justify-start lg:justify-start  h-auto overflow-hidden  ">
           <motion.div
             key={index}
             initial={{ y: "-100%" }}
@@ -136,7 +136,7 @@ export default function Hero() {
       
 
       {/* Right Side (Animation) */}
-      <div className="flex-1 flex justify-center items-center h-[18rem] sm:h-[22rem] md:h-[26rem] lg:h-[30rem]">
+      <div className="flex-1 flex justify-center items-center h-[18rem] sm:h-[20rem] md:h-[26rem] lg:h-[30rem]">
         <Lottie
           animationData={devAnimation}
           loop={true}
