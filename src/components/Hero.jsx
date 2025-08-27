@@ -106,16 +106,16 @@ export default function Hero() {
           <Link href="https://github.com/xeylous" target="_blank">
             <FaGithub className="text-gray-600 hover:text-black transition duration-300" />
           </Link>
-          <Link href="https://linkedin.com/in/yourusername" target="_blank">
+          <Link href="https://www.linkedin.com/in/apurvsinha2003/" target="_blank">
             <FaLinkedin className="text-gray-600 hover:text-blue-800 transition duration-300" />
           </Link>
           <Link href="https://twitter.com/xeylous" target="_blank">
             <FaTwitter className="text-gray-600 hover:text-sky-700 transition duration-300" />
           </Link>
-          <Link href="https://instagram.com/yourusername" target="_blank">
+          <Link href="https://instagram.com/xeylous" target="_blank">
             <FaInstagram className="text-gray-600 hover:text-pink-700 transition duration-300" />
           </Link>
-          <Link href="mailto:your@email.com">
+          <Link href="mailto:xeylous@email.com">
             <FaEnvelope className="text-gray-600 hover:text-red-700 transition duration-300" />
           </Link>
         </div>

@@ -7,7 +7,7 @@
 
 html, body {
   scroll-behavior: smooth;
-  background-color: #0f172a; /* slate-900 dark background */
+  background-color: #000000; /* slate-900 dark background 0f172a */
   color: #f8fafc; /* slate-50 text */
   font-family: 'Inter', sans-serif;
 }
