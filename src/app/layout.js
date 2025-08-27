@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-slate-900 text-slate-100">
         <Navbar />
-        <div className="pt-16">{children}</div>
+        <div className=" sm:pt-0 md:pt-16 lg:pt-16">{children}</div>
       </body>
     </html>
   );
