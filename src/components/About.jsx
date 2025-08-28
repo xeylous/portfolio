@@ -42,20 +42,20 @@ export default function AboutMe() {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="max-w-2xl flex flex-col gap-6 text-3xl md:text-lg leading-relaxed text-zinc-700 items-center justify-center text-center"
+        className="max-w-2xl flex flex-col gap-4 text-3xl md:text-lg leading-relaxed text-zinc-700 items-center justify-center text-center"
         style={{ fontFamily: "Charm, cursive" }}
       >
         <p>
-          I am <span className="font-base text-sky-500">Apurv Sinha</span>, a{" "}
-          <span className="font-base text-purple-500">
+          I am <span className=" text-sky-500">Apurv Sinha</span>, a{" "}
+          <span className=" text-purple-500">
             Computer Science Engineering Student
           </span>{" "}
           from Jharkhand. Passionate about{" "}
-          <span className="font-base text-pink-500">
+          <span className=" text-pink-500">
             full-stack development
           </span>{" "}
           and{" "}
-          <span className="font-base text-green-500">
+          <span className=" text-green-500">
             blockchain technology
           </span>
           , I love building creative and efficient web experiences.
@@ -63,30 +63,30 @@ export default function AboutMe() {
 
         <p>
           My goal is to craft{" "}
-          <span className="font-base text-yellow-500">
+          <span className=" text-yellow-500">
             seamless digital solutions
           </span>{" "}
           while constantly exploring new technologies and ideas. I believe in
           combining{" "}
-          <span className="font-base text-indigo-500">innovation</span> with{" "}
-          <span className="font-base text-red-500">simplicity</span> to deliver
+          <span className=" text-indigo-500">innovation</span> with{" "}
+          <span className=" text-red-500">simplicity</span> to deliver
           impactful products that make a difference.
         </p>
 
         <p className="hidden md:block lg:block">
           Beyond coding, I enjoy learning about{" "}
-          <span className="font-base text-emerald-500">
+          <span className=" text-emerald-500">
             emerging technologies
           </span>
           , solving real-world problems through{" "}
-          <span className="font-base text-orange-500">creative projects</span>,
+          <span className=" text-orange-500">creative projects</span>,
           and sharing knowledge with peers. My curiosity and dedication push me
           to keep improving every day.
         </p>
 
         <p className="hidden md:block lg:block">
           In the future, I aspire to become a{" "}
-          <span className="font-base text-blue-600">
+          <span className=" text-blue-600">
             tech innovator and entrepreneur
           </span>{" "}
           who not only develops applications but also inspires others to dream,
