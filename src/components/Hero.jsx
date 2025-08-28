@@ -51,12 +51,12 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="flex flex-col-reverse md:flex-row items-center justify-between px-6 py-10 bg-white"
+      className="flex flex-col-reverse md:flex-row items-center justify-between px-9 pb-10 sm:pt-2 md:8 lg:pt-14 bg-white"
     >
       {/* Left Side (Text) */}
-      <div className="flex-1 text-center md:text-left mt-10 md:mt-0 md:ml-10 ">
+      <div className="flex-1 text-center md:text-left mt-8 md:mt-0 md:ml-10 ">
         {/* Name */}
-        <div className="sm:flex sm:justify-center md:justify-start lg:justify-start  h-auto overflow-hidden  ">
+        <div className="sm:flex sm:justify-center md:justify-start lg:justify-start  sm:h-18 md:h-21  overflow-hidden  ">
           <motion.div
             key={index}
             initial={{ y: "-100%" }}
@@ -128,7 +128,7 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.8 }}
         className="inline-block mt-6 px-6 py-3 rounded-2xl bg-zinc-600 text-white font-semibold shadow-md hover:bg-zinc-800 hover:shadow-lg transition-all duration-300"
-        style={{ fontFamily: "'Playwrite CA', cursive" }}
+        // style={{ fontFamily: "'Playwrite CA', cursive" }}
       >
         Resume Here
       </motion.a>

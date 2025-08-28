@@ -1,40 +1,55 @@
 "use client";
-
 import { motion } from "framer-motion";
 
-export default function About() {
+export default function AboutMe() {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col items-center justify-center text-center px-6 bg-zinc-900 text-white"
+      className="flex flex-col md:flex-row items-center justify-between px-10 py-20 bg-white text-white"
     >
+      {/* LEFT SIDE - Heading */}
       <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="text-4xl md:text-5xl font-bold mb-6"
+        className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-sky-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-10 md:mb-0"
       >
-        About Me
+        ABOUT ME
       </motion.h2>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+      {/* RIGHT SIDE - Introduction */}
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.3, duration: 0.8 }}
-        className="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed"
+        className="max-w-2xl flex flex-col gap-6 text-lg md:text-xl leading-relaxed"
       >
-        Hi 👋 I’m <span className="font-semibold text-white">Apurv Sinha</span>, 
-        a passionate developer focused on building{" "}
-        <span className="text-sky-400">modern web</span> and{" "}
-        <span className="text-sky-400">blockchain solutions</span>.  
-        I enjoy crafting clean, efficient, and scalable applications with 
-        <span className="font-semibold"> Next.js</span>, 
-        <span className="font-semibold"> React</span>, 
-        <span className="font-semibold"> Tailwind CSS</span>, and 
-        <span className="font-semibold"> Solidity</span>.
-      </motion.p>
+        <p>
+          I am <span className="font-semibold text-sky-400">Apurv Sinha</span>, a{" "}
+          <span className="font-semibold text-purple-400">
+            Computer Science Engineering Student
+          </span>{" "}
+          from Jharkhand. Passionate about{" "}
+          <span className="font-semibold text-pink-400">
+            full-stack development
+          </span>{" "}
+          and{" "}
+          <span className="font-semibold text-green-400">
+            blockchain technology
+          </span>
+          , I love building creative and efficient web experiences.
+        </p>
+
+        <p>
+          My goal is to craft{" "}
+          <span className="font-semibold text-yellow-400">
+            seamless digital solutions
+          </span>{" "}
+          while constantly exploring new technologies and ideas.
+        </p>
+      </motion.div>
     </section>
   );
 }
