@@ -42,7 +42,7 @@ export default function AboutMe() {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="max-w-2xl flex flex-col gap-4 text-3xl md:text-lg leading-relaxed text-zinc-700 "
+        className="max-w-2xl flex flex-col gap-2 text-3xl md:text-lg leading-relaxed text-zinc-700 "
         style={{ fontFamily: "Charm, cursive" }}
       >
         <p>
