@@ -12,9 +12,9 @@ const projects = {
     description: "Decentralized NFT-based event ticketing platform with resale & transfers.",
     stack: ["Next.js", "Solidity", "React"],
   },
-  "library-system": {
-    title: "Library Management System",
-    description: "Full-stack MERN app with beautiful UI for managing books & students.",
+  "cryptransfer": {
+    title: "CrypTransfer",
+    description: "Decentralized cryptocurrency transfer platform with real-time tracking.",
     stack: ["React", "Node.js", "MongoDB", "Tailwind"],
   },
   niveshwise: {

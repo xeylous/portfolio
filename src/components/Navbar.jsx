@@ -10,14 +10,14 @@ export default function Navbar() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-zinc-950/70 backdrop-blur-md shadow-lg">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-zinc-800 backdrop-blur-md shadow-lg">
+      <div className="max-w-full mx-auto sm:pl-10  lg:pl-10 md:pl-15 md:ml-12 pr-6 py-4 flex justify-between items-center ">
         
         {/* Logo / Name - Always Visible */}
-        <h1 className="font-bold text-sky-400 text-xl">Apurv Sinha</h1>
+        <h1 className="font-bold text-zinc-400 text-xl md:px-5 px-8">Apurv Sinha</h1>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex gap-6 text-slate-200">
+        <div className="hidden md:flex gap-6 text-slate-200 md:px-32">
           {["home", "about", "projects", "contact"].map((section) => (
             <Link
               key={section}

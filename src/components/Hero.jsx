@@ -54,7 +54,7 @@ export default function Hero() {
       className="flex flex-col-reverse md:flex-row items-center justify-between px-9 pb-10 sm:pt-2 md:8 lg:pt-14 bg-white"
     >
       {/* Left Side (Text) */}
-      <div className="flex-1 text-center md:text-left mt-0 md:mt-0 md:ml-10 ">
+      <div className="flex-1 text-center md:text-left mt-0 md:mt-0  md:ml-16 ">
         {/* Name */}
         <div className="sm:flex sm:justify-center md:justify-start lg:justify-start  sm:h-18 md:h-22  overflow-hidden  ">
           <motion.div

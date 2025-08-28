@@ -19,9 +19,9 @@ const projects = [
     tech: [SiNextdotjs, SiSolidity, FaReact],
   },
   {
-    title: "Library Management System",
-    slug: "library-system",
-    description: "Full-stack MERN app with beautiful UI for managing books & students.",
+    title: "CrypTransfer",
+    slug: "cryptransfer",
+    description: "Decentralized cryptocurrency transfer platform with real-time tracking.",
     tech: [FaReact, FaNodeJs, SiMongodb, SiTailwindcss],
   },
   {

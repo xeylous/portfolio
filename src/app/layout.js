@@ -36,10 +36,11 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Playwrite+CA:wght@100..400&family=Satisfy&display=swap"
           rel="stylesheet"
         ></link>
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+CA:wght@100..400&family=Roboto+Slab:wght@100..900&family=Rochester&family=Satisfy&display=swap" rel="stylesheet"></link>
       </head>
       <body className="bg-slate-900 text-slate-100">
         <Navbar />
-        <div className=" sm:pt-16 md:pt-16 lg:pt-16">{children}</div>
+        <div className=" sm:pt-14 md:pt-14 lg:pt-14">{children}</div>
       </body>
     </html>
   );
