@@ -30,9 +30,9 @@ export default function AboutMe() {
         <Image
           src="/Photo.jpg"
           alt="Apurv Sinha"
-          width={270}
-          height={270}
-          className="rounded-lg border-4 border-zinc-700 shadow-xl object-cover"
+          width={250}
+          height={100}
+          className="rounded-lg border-4 border-zinc-700 shadow-xl object-cover  h-[337px] w-80 object-top"
         />
       </motion.div>
 
