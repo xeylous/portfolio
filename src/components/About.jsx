@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import {Photo} from "../../public/Photo.jpg"
+import { Photo } from "../../public/Photo.jpg";
 
 export default function AboutMe() {
   return (
@@ -42,12 +42,11 @@ export default function AboutMe() {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="max-w-2xl flex flex-col gap-6 text-3xl md:text-lg leading-relaxed text-zinc-700"
+        className="max-w-2xl flex flex-col gap-6 text-3xl md:text-lg leading-relaxed text-zinc-700 items-center justify-center text-center"
         style={{ fontFamily: "Charm, cursive" }}
       >
         <p>
-          I am <span className="font-base text-sky-500">Apurv Sinha</span>,
-          a{" "}
+          I am <span className="font-base text-sky-500">Apurv Sinha</span>, a{" "}
           <span className="font-base text-purple-500">
             Computer Science Engineering Student
           </span>{" "}
@@ -70,24 +69,22 @@ export default function AboutMe() {
           while constantly exploring new technologies and ideas. I believe in
           combining{" "}
           <span className="font-base text-indigo-500">innovation</span> with{" "}
-          <span className="font-base text-red-500">simplicity</span> to
-          deliver impactful products that make a difference.
+          <span className="font-base text-red-500">simplicity</span> to deliver
+          impactful products that make a difference.
         </p>
 
-        <p>
+        <p className="hidden md:block lg:block">
           Beyond coding, I enjoy learning about{" "}
           <span className="font-base text-emerald-500">
             emerging technologies
           </span>
           , solving real-world problems through{" "}
-          <span className="font-base text-orange-500">
-            creative projects
-          </span>
-          , and sharing knowledge with peers. My curiosity and dedication push
-          me to keep improving every day.
+          <span className="font-base text-orange-500">creative projects</span>,
+          and sharing knowledge with peers. My curiosity and dedication push me
+          to keep improving every day.
         </p>
 
-        <p>
+        <p className="hidden md:block lg:block">
           In the future, I aspire to become a{" "}
           <span className="font-base text-blue-600">
             tech innovator and entrepreneur
