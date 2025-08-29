@@ -30,7 +30,7 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="min-h-screen scroll-mt-16">
+      <section id="contact">
         <Contact />
       </section>
 
