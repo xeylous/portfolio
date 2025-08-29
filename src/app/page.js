@@ -34,9 +34,9 @@ export default function Home() {
         <Contact />
       </section>
 
-      <section id="socials">
+      {/* <section id="socials">
         <Socials />
-      </section>
+      </section> */}
 
       <section>
         <Footer />
