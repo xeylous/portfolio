@@ -7,7 +7,7 @@ export default function AboutMe() {
   return (
     <section
       id="about"
-      className="flex flex-col  justify-center  gap-5 px-10 py-5 md:py-[28px] bg-white  "
+      className="flex flex-col  justify-center  gap-5 px-10   py-5 md:py-[80px] bg-white  "
     >
       {/* MOBILE - Heading */}
       <motion.h2
