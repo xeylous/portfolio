@@ -12,13 +12,20 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-zinc-800 backdrop-blur-md shadow-lg">
       <div className="max-w-full mx-auto sm:pl-10  lg:pl-10 md:pl-15 md:ml-12 pr-6 py-4 flex justify-between items-center ">
-        
         {/* Logo / Name - Always Visible */}
-        <h1 className="font-bold text-zinc-400 text-xl md:px-5 px-8">Apurv Sinha</h1>
+        <h1 className="font-bold text-zinc-400 text-xl md:px-5 px-8">
+          Apurv Sinha
+        </h1>
 
         {/* Desktop Links */}
         <div className="hidden md:flex gap-6 text-slate-200 md:px-32">
-          {["home", "about", "projects", "contact"].map((section) => (
+          {[
+            { section: "home", color: "hover:text-pink-400" },
+            { section: "about", color: "hover:text-emerald-400" },
+            { section: "work", color: "hover:text-yellow-400" },
+            { section: "projects", color: "hover:text-indigo-400" },
+            { section: "contact", color: "hover:text-red-400" },
+          ].map(({ section, color }) => (
             <Link
               key={section}
               to={section}
@@ -26,7 +33,7 @@ export default function Navbar() {
               smooth={true}
               duration={600}
               offset={-80}
-              className="cursor-pointer capitalize hover:text-sky-400 transition-colors"
+              className={`cursor-pointer capitalize transition-colors ${color}`}
             >
               {section}
             </Link>
@@ -45,7 +52,7 @@ export default function Navbar() {
       {/* Mobile Menu Dropdown */}
       {menuOpen && (
         <div className="md:hidden bg-zinc-900/95 backdrop-blur-md shadow-lg px-6 py-4 space-y-4">
-          {["home", "about", "projects", "contact"].map((section) => (
+          {["home", "about", "work", "projects", "contact"].map((section) => (
             <Link
               key={section}
               to={section}
