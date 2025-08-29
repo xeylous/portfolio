@@ -11,12 +11,10 @@ import {
 
 export default function SocialSection() {
   const socials = [
-    { name: "GitHub", icon: <FaGithub />, link: "https://github.com/yourusername" },
-    { name: "LinkedIn", icon: <FaLinkedin />, link: "https://linkedin.com/in/yourusername" },
-    { name: "Twitter", icon: <FaTwitter />, link: "https://twitter.com/yourusername" },
-    { name: "Instagram", icon: <FaInstagram />, link: "https://instagram.com/yourusername" },
-    { name: "Discord", icon: <FaDiscord />, link: "https://discord.gg/yourinvite" },
-    { name: "YouTube", icon: <FaYoutube />, link: "https://youtube.com/@yourusername" },
+    { name: "GitHub", icon: <FaGithub />, link: "https://github.com/xeylous" },
+    { name: "LinkedIn", icon: <FaLinkedin />, link: "https://www.linkedin.com/in/apurvsinha2003/" },
+    { name: "Twitter", icon: <FaTwitter />, link: "https://twitter.com/xeylous" },
+    { name: "Instagram", icon: <FaInstagram />, link: "https://instagram.com/xeylous" }
   ];
 
   return (
