@@ -41,9 +41,9 @@ export default function AboutMe() {
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="max-w-2xl flex flex-col gap-2 text-3xl md:text-lg leading-relaxed text-zinc-700 "
-        style={{ fontFamily: "Charm, cursive" }}
+        viewport={{ once: true }} 
+        className="max-w-2xl flex flex-col gap-2 text-xl md:text-lg leading-relaxed text-zinc-700 "
+        style={{ fontFamily: "charm" }}
       >
         <p>
           I am <span className=" text-sky-500">Apurv Sinha</span>, a{" "}

@@ -3,15 +3,6 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import "./globals.css";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
 
 export const metadata = {
   title: "Xeylous | Portfolio",
@@ -40,7 +31,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-slate-900 text-slate-100">
         <Navbar />
-        <div className=" sm:pt-14 md:pt-14 lg:pt-14">{children}</div>
+        <div className={` sm:pt-14 md:pt-14 lg:pt-14`}>{children}</div>
       </body>
     </html>
   );
