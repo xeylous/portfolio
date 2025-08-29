@@ -13,7 +13,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-zinc-800 backdrop-blur-md shadow-lg">
       <div className="max-w-full mx-auto sm:pl-10  lg:pl-10 md:pl-15 md:ml-12 pr-6 py-4 flex justify-between items-center ">
         {/* Logo / Name - Always Visible */}
-        <h1 className="font-bold text-zinc-400 text-xl md:px-5 px-8 cursor-pointer">
+        <h1 className="font-bold text-white text-xl md:px-5 px-8 cursor-pointer" style={{ fontFamily: "Delius" }}>
           <Link
             to="home"
             spy={true}

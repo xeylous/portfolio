@@ -39,7 +39,7 @@ export default function AboutMe() {
 
         {/* RIGHT SIDE - Introduction */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}

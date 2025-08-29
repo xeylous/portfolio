@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import Socials from "@/components/Socials";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
@@ -7,7 +8,7 @@ import WorkExperience from "@/components/WorkExperience";
 
 export default function Home() {
   return (
-    <main >
+    <main>
       {/* Hero */}
       <section id="home">
         <Hero />
@@ -17,12 +18,11 @@ export default function Home() {
       <section id="about">
         <About />
       </section>
-       
 
       {/* Work Experience */}
       <section id="work">
         <WorkExperience />
-      </section> 
+      </section>
 
       {/* Projects */}
       <section id="projects">
@@ -33,9 +33,15 @@ export default function Home() {
       <section id="contact" className="min-h-screen scroll-mt-16">
         <Contact />
       </section>
-      <section >
+
+      <section id="socials">
+        <Socials />
+      </section>
+
+      <section>
         <Footer />
       </section>
+
     </main>
   );
 }
