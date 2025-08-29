@@ -27,12 +27,12 @@ export default function WorkExperience() {
   ];
 
   return (
-    <section id="work" className="w-full pt-[30px] bg-white">
+    <section id="work" className="w-full pt-[30px] bg-white ">
       {/* Heading */}
       <motion.h2
-        initial={{ opacity: 0, y: -40 }}
+        initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
+        transition={{ duration: 0.6 }}
         viewport={{ once: true }}
         className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-zinc-900 via-zinc-500 to-zinc-900 bg-clip-text text-transparent text-center"
       >
@@ -44,9 +44,18 @@ export default function WorkExperience() {
         {experiences.map((exp, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: index * 0.1 }}
+            initial={{
+              opacity: 0,
+              // 👇 fade-up for mobile, slide for desktop
+              x: 0,
+              y: 40,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              y: 0,
+            }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
             viewport={{ once: true }}
             className="bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all"
           >
