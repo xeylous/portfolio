@@ -20,10 +20,10 @@ export default function SocialSection() {
   ];
 
   return (
-    <section className="w-full border-t border-black bg-white py-10">
+    <section className="w-full  bg-white py-4">
       <div className="max-w-5xl mx-auto px-6">
         {/* Social Icons */}
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-6">
           {socials.map((s, i) => (
             <a
               key={i}
