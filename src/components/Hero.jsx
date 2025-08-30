@@ -122,8 +122,9 @@ export default function Hero() {
 
         {/*Resume button */}
       <motion.a
-        href="/resume.pdf" // 👉 replace with your actual resume link or file
-        download
+        href="/Apurv_Sinha_Resume.pdf" // 👉 replace with your actual resume link or file
+        // download
+        target="_blank"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.8 }}

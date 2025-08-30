@@ -3,8 +3,8 @@ import Contact from "@/components/Contact";
 import Socials from "@/components/Socials";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
-import Projects from "@/components/Projects";
 import WorkExperience from "@/components/WorkExperience";
+import MyProjects from "@/components/MyProjects";
 
 export default function Home() {
   return (
@@ -26,7 +26,7 @@ export default function Home() {
 
       {/* Projects */}
       <section id="projects">
-        <Projects />
+        <MyProjects />
       </section>
 
       {/* Contact */}
@@ -34,9 +34,9 @@ export default function Home() {
         <Contact />
       </section>
 
-      {/* <section id="socials">
+      <section id="socials">
         <Socials />
-      </section> */}
+      </section>
 
       <section>
         <Footer />

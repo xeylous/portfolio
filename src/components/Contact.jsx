@@ -166,7 +166,7 @@ export default function ContactSection() {
       });
 
       if (res.ok) {
-        setStatus("✅ Message sent successfully!");
+        setStatus("Ohho!!Message sent successfully!");
         setForm({ name: "", email: "", subject: "", message: "" });
       } else {
         setStatus("Opps!! Failed to send.");
