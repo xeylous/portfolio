@@ -11,6 +11,7 @@ import {
   FaInstagram,
   FaEnvelope,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import devAnimation from "../../public/animation.json";
 
 export default function Hero() {
@@ -110,7 +111,7 @@ export default function Hero() {
             <FaLinkedin className="text-gray-600 hover:text-blue-800 transition duration-300" />
           </Link>
           <Link href="https://twitter.com/xeylous" target="_blank">
-            <FaTwitter className="text-gray-600 hover:text-sky-700 transition duration-300" />
+            <FaXTwitter className="text-gray-600 hover:text-sky-700 transition duration-300" />
           </Link>
           <Link href="https://instagram.com/xeylous" target="_blank">
             <FaInstagram className="text-gray-600 hover:text-pink-700 transition duration-300" />

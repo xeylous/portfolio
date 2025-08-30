@@ -8,12 +8,13 @@ import {
   FaDiscord,
   FaYoutube,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function SocialSection() {
   const socials = [
     { name: "GitHub", icon: <FaGithub />, link: "https://github.com/xeylous" },
     { name: "LinkedIn", icon: <FaLinkedin />, link: "https://www.linkedin.com/in/apurvsinha2003/" },
-    { name: "Twitter", icon: <FaTwitter />, link: "https://twitter.com/xeylous" },
+    { name: "Twitter", icon: <FaXTwitter />, link: "https://twitter.com/xeylous" },
     { name: "Instagram", icon: <FaInstagram />, link: "https://instagram.com/xeylous" }
   ];
 

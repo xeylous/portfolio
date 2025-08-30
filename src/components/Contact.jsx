@@ -133,19 +133,31 @@
 //   );
 // }
 
-
-
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 "use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaInstagram,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function ContactSection() {
-  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false)
   const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
@@ -153,34 +165,34 @@ export default function ContactSection() {
   };
 
   const handleSubmit = async (e) => {
-    console.log("form", form);
+  e.preventDefault();
+  setLoading(true);
+  setStatus(null);
 
-    e.preventDefault();
-    setStatus("Sending...");
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
 
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-
-      if (res.ok) {
-        setStatus("Ohho!!Message sent successfully!");
-        setForm({ name: "", email: "", subject: "", message: "" });
-      } else {
-        setStatus("Opps!! Failed to send.");
-      }
-    } catch (error) {
-      console.error(error);
-      setStatus("⚠️ Something went wrong!");
+    if (res.ok) {
+      setStatus({ type: "success", message: "✅ Your message has been sent successfully!" });
+      setForm({ name: "", email: "", subject: "", message: "" }); // clear form
+    } else {
+      setStatus({ type: "error", message: "❌ Failed to send message. Please try again later." });
     }
-  };
+  } catch (error) {
+    console.error(error);
+    setStatus({ type: "error", message: "⚠️ Something went wrong. Please try again." });
+  }
+
+  setLoading(false);
+};
 
   return (
     <section id="contact" className="w-full bg-white text-zinc-900 py-16 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        
         {/* LEFT SIDE */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -192,23 +204,51 @@ export default function ContactSection() {
           <div>
             <h3 className="text-2xl font-bold mb-4">Let's Connect</h3>
             <p className="text-zinc-600 mb-6">
-              I'm passionate about creating digital experiences that make a difference.  
-              Reach out via email, phone, or socials.
+              I'm passionate about creating digital experiences that make a
+              difference. Reach out via email, phone, or socials.
             </p>
             <div className="space-y-4 text-zinc-700">
-              <p className="flex items-center gap-3"><FaEnvelope /> xeylous@gmail.com</p>
+              <p className="flex items-center gap-3">
+                <FaEnvelope /> xeylous@gmail.com
+              </p>
               {/* <p className="flex items-center gap-3"><FaPhone /> +123 456 7890</p> */}
-              <p className="flex items-center gap-3"><FaMapMarkerAlt /> Kolkata, India</p>
+              <p className="flex items-center gap-3">
+                <FaMapMarkerAlt /> Kolkata, India
+              </p>
             </div>
           </div>
 
           <div className="mt-8">
             <h4 className="font-semibold mb-3">Follow Me</h4>
             <div className="flex gap-4">
-              <a href="https://github.com/xeylous" target="_blank" className="w-10 h-10 flex items-center justify-center rounded-lg border border-zinc-300 hover:bg-zinc-100 transition"><FaGithub /></a>
-              <a href="https://www.linkedin.com/in/apurvsinha2003/" target="_blank" className="w-10 h-10 flex items-center justify-center rounded-lg border border-zinc-300 hover:bg-zinc-100 transition"><FaLinkedin /></a>
-              <a href="https://twitter.com/xeylous" target="_blank" className="w-10 h-10 flex items-center justify-center rounded-lg border border-zinc-300 hover:bg-zinc-100 transition"><FaTwitter /></a>
-              <a href="https://instagram.com/xeylous" target="_blank" className="w-10 h-10 flex items-center justify-center rounded-lg border border-zinc-300 hover:bg-zinc-100 transition"><FaInstagram /></a>
+              <a
+                href="https://github.com/xeylous"
+                target="_blank"
+                className="w-10 h-10 flex items-center justify-center rounded-lg border border-zinc-300 hover:bg-zinc-100 transition"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/apurvsinha2003/"
+                target="_blank"
+                className="w-10 h-10 flex items-center justify-center rounded-lg border border-zinc-300 hover:bg-zinc-100 transition"
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                href="https://twitter.com/xeylous"
+                target="_blank"
+                className="w-10 h-10 flex items-center justify-center rounded-lg border border-zinc-300 hover:bg-zinc-100 transition"
+              >
+                <FaXTwitter />
+              </a>
+              <a
+                href="https://instagram.com/xeylous"
+                target="_blank"
+                className="w-10 h-10 flex items-center justify-center rounded-lg border border-zinc-300 hover:bg-zinc-100 transition"
+              >
+                <FaInstagram />
+              </a>
             </div>
           </div>
         </motion.div>
@@ -223,7 +263,9 @@ export default function ContactSection() {
           className="bg-white border border-zinc-200 rounded-2xl shadow-md p-8 space-y-6"
         >
           <h3 className="text-2xl font-bold mb-2">Start a Conversation</h3>
-          <p className="text-zinc-600 mb-6">Fill out the form below and I'll get back to you soon.</p>
+          <p className="text-zinc-600 mb-6">
+            Fill out the form below and I'll get back to you soon.
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
@@ -266,14 +308,29 @@ export default function ContactSection() {
             className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-zinc-900 focus:outline-none"
           ></textarea>
 
+          {/* Submit button */}
           <button
             type="submit"
-            className="w-full bg-zinc-900 text-white py-3 rounded-lg font-medium hover:bg-zinc-800 cursor-pointer transition"
+            disabled={loading}
+            className={`w-full py-3 rounded-lg font-medium transition cursor-pointer ${
+              loading
+                ? "bg-gray-400 text-white cursor-not-allowed"
+                : "bg-zinc-900 text-white hover:bg-zinc-800"
+            }`}
           >
-            Send Message →
+            {loading ? "Sending..." : "Send Message →"}
           </button>
 
-          {status && <p className="text-center text-sm text-zinc-700 mt-4">{status}</p>}
+          {/* Status messages */}
+          {status && (
+            <p
+              className={`text-center text-sm mt-4 ${
+                status.type === "success" ? "text-green-600" : "text-red-600"
+              }`}
+            >
+              {status.message}
+            </p>
+          )}
         </motion.form>
       </div>
     </section>

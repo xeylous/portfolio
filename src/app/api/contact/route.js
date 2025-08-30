@@ -32,10 +32,10 @@ export async function POST(req) {
     const userMail = {
       from: process.env.EMAIL_USER, // must be your Gmail
       to: email, // send to user’s email
-      subject: `✅ Thanks for reaching out, ${name}!`,
+      subject: `Thanks for reaching out, ${name}!`,
       html: `
         <h2>Hello ${name},</h2>
-        <p>Thanks for contacting me! I’ve received your message and will get back to you soon.</p>
+        <p>Thanks for contacting me! I've received your message and will get back to you soon.</p>
         <br/>
         <p>Best Regards,<br/><b>Apurv Sinha</b></p>
       `,
