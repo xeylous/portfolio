@@ -21,7 +21,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % names.length);
-    }, 5000);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
@@ -51,7 +51,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="flex flex-col-reverse md:flex-row items-center justify-between px-9 pb-10 sm:pt-2 md:8 lg:pt-14 bg-white"
+      className="flex flex-col-reverse min-h-screen md:flex-row items-center justify-between px-9 pb-10 sm:pt-2 md:8 lg:pt-14 bg-white"
     >
       {/* Left Side (Text) */}
       <div className="flex-1 text-center md:text-left mt-0 md:mt-0  md:ml-16 ">
@@ -63,7 +63,7 @@ export default function Hero() {
             animate={{ y: 0 }}
             exit={{ y: "100%" }}
             transition={{ duration: 1, ease: "easeInOut" }}
-            className="text-4xl sm:text-6xl lg:text-7xl  font-extrabold text-zinc-900"
+            className="text-4xl sm:text-4xl md:text-5xl md:pb-2 lg:text-6xl m-0 min-w-20 pb-2 font-extrabold text-zinc-900"
           >
             {names[index]}
           </motion.div>
@@ -76,7 +76,7 @@ export default function Hero() {
           transition={{ duration: 1 }}
           className="text-2xl sm:text-3xl text-zinc-700  flex justify-center md:justify-start flex-wrap"
         >
-          <span className="mr-2">A passionate</span>
+          <span className="mr-2 pt-0">A passionate</span>
           <span className={colors[colorIndex]}>
             <Typewriter
               words={words}
@@ -137,7 +137,7 @@ export default function Hero() {
       
 
       {/* Right Side (Animation) */}
-      <div className="flex-1 flex justify-center items-center h-[18rem] sm:h-[20rem] md:h-[26rem] lg:h-[30rem]">
+      <div className="flex-1 flex justify-center items-center h-[18rem] sm:h-[20rem] md:h-[26rem] lg:h-[30rem] lg:overflow-y-hidden">
         <Lottie
           animationData={devAnimation}
           loop={true}

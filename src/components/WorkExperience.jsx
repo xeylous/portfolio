@@ -27,7 +27,7 @@ export default function WorkExperience() {
   ];
 
   return (
-    <section id="work" className="w-full pt-[10px] pb-[40px] bg-white ">
+    <section id="work" className="w-full pt-[10px] pb-[40px] bg-white  min-h-screen">
       {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
