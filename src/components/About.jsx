@@ -87,13 +87,16 @@ export default function AboutMe() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2 pt-3 text-sm sm:text-base text-zinc-600">
             <span className="before:content-['▸'] before:mr-2 text-zinc-600">
-              Nextjs
+              NextJS
             </span>
             <span className="before:content-['▸'] before:mr-2 text-sky-500">
-              Reactjs
+              ReactJS
             </span>
             <span className="before:content-['▸'] before:mr-2 text-pink-500">
               Tailwind
+            </span>
+            <span className="before:content-['▸'] before:mr-2 text-yellow-500">
+              Typescript
             </span>
             <span className="before:content-['▸'] before:mr-2 text-zinc-700">
               Ethereum
@@ -102,10 +105,13 @@ export default function AboutMe() {
               Solidity
             </span>
             <span className="before:content-['▸'] before:mr-2 text-lime-600">
-              Nodejs
+              NodeJS
             </span>
             <span className="before:content-['▸'] before:mr-2 text-green-600">
-              MongoDb
+              MongoDB
+            </span>
+            <span className="before:content-['▸'] before:mr-2 text-red-600">
+              Redis
             </span>
             <span className="before:content-['▸'] before:mr-2 text-blue-600">
               Docker
