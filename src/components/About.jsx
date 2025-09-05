@@ -50,8 +50,8 @@ export default function AboutMe() {
             Hello, I am <span className=" text-sky-500">Apurv Sinha</span>, a{" "}
             <span className=" text-purple-500">
               Computer Science Engineering Student
-            </span>{" "}
-            .Passionate about{" "}
+            </span>{""}
+            . Passionate about{" "}
             <span className=" text-pink-500">full-stack development</span> and{" "}
             <span className=" text-green-500">blockchain technology</span>, I
             love building creative and efficient web experiences.
@@ -95,7 +95,7 @@ export default function AboutMe() {
             <span className="before:content-['▸'] before:mr-2 text-pink-500">
               Tailwind
             </span>
-            <span className="before:content-['▸'] before:mr-2 text-yellow-500">
+            <span className="before:content-['▸'] before:mr-2 text-yellow-600">
               Typescript
             </span>
             <span className="before:content-['▸'] before:mr-2 text-zinc-700">
