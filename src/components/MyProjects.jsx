@@ -33,7 +33,7 @@ const projects = [
       "A tourism website designed to promote Telaiya Dam and surrounding attractions in Jharkhand. It showcases destinations, activities, and travel information with a visually appealing and responsive design. The site aims to enhance local tourism by offering an engaging platform for visitors to explore natural beauty, history, and cultural richness of the region.Infact this is my first website i made while learning Reactjs.",
     tech: ["React.js", "MongoDB", "Tailwind CSS"],
     image: "/TelaiyaTourism.png",
-    // github: "https://github.com/xeylous/CrypTransfer",
+    github: "https://github.com/xeylous/TelaiyaTourism",
     site: "https://telaiya-tourism.vercel.app/",
   },
 ];
