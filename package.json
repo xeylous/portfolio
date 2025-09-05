@@ -24,7 +24,8 @@
     "react-simple-typewriter": "^5.0.1",
     "react-typed": "^2.0.12",
     "simple-icons": "^15.12.0",
-    "three": "^0.179.1"
+    "three": "^0.179.1",
+    "validator": "^13.15.15"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

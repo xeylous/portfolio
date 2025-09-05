@@ -149,6 +149,7 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import validator from "validator";
 
 export default function ContactSection() {
   const [form, setForm] = useState({
@@ -164,8 +165,15 @@ export default function ContactSection() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
+
+  // ✅ Email validation using validator
+  if (!validator.isEmail(form.email)) {
+    setStatus({ type: "error", message: "⚠️ Please enter a valid email address." });
+    return;
+  }
+
   setLoading(true);
   setStatus(null);
 
@@ -189,6 +197,7 @@ export default function ContactSection() {
 
   setLoading(false);
 };
+
 
   return (
     <section id="contact" className="w-full bg-white text-zinc-900 py-16 px-6">
@@ -242,13 +251,13 @@ export default function ContactSection() {
               >
                 <FaXTwitter />
               </a>
-              <a
+              {/* <a
                 href="https://instagram.com/xeylous"
                 target="_blank"
                 className="w-10 h-10 flex items-center justify-center rounded-lg border border-zinc-300 hover:bg-zinc-100 transition"
               >
                 <FaInstagram />
-              </a>
+              </a> */}
             </div>
           </div>
         </motion.div>

@@ -15,7 +15,7 @@ export default function SocialSection() {
     { name: "GitHub", icon: <FaGithub />, link: "https://github.com/xeylous" },
     { name: "LinkedIn", icon: <FaLinkedin />, link: "https://www.linkedin.com/in/apurvsinha2003/" },
     { name: "Twitter", icon: <FaXTwitter />, link: "https://twitter.com/xeylous" },
-    { name: "Instagram", icon: <FaInstagram />, link: "https://instagram.com/xeylous" }
+    // { name: "Instagram", icon: <FaInstagram />, link: "https://instagram.com/xeylous" }
   ];
 
   return (
