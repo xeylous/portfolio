@@ -113,9 +113,9 @@ export default function Hero() {
           <Link href="https://twitter.com/xeylous" target="_blank">
             <FaXTwitter className="text-gray-600 hover:text-sky-700 transition duration-300" />
           </Link>
-          <Link href="https://instagram.com/xeylous" target="_blank">
+          {/* <Link href="https://instagram.com/xeylous" target="_blank">
             <FaInstagram className="text-gray-600 hover:text-pink-700 transition duration-300" />
-          </Link>
+          </Link> */}
           <Link href="mailto:xeylous@gmail.com">
             <FaEnvelope className="text-gray-600 hover:text-red-700 transition duration-300" />
           </Link>
