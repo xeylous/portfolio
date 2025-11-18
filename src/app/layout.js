@@ -5,7 +5,7 @@ import "./globals.css";
 
 
 export const metadata = {
-  title: "Xeylous | Portfolio",
+  title: "xeylous | Portfolio",
   description: "Portfolio of Xeylous - Web Developer & Blockchain Enthusiast",
 };
 
