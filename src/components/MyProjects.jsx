@@ -7,6 +7,16 @@ import { Github } from "lucide-react";
 
 const projects = [
   {
+    title: "Ayur Sathi",
+    subtitle: "Featured Project",
+    description:
+      "Permissioned blockchain with smart contracts, geo-fenced harvest rules and QR-powered consumer provenance — built for ethical sourcing and rapid audits.",
+    tech: ["React.js","Javascript", "MongoDB", "Tailwind CSS","Nextjs","Restful Api","Cloudinary","Redis"],
+    image: "/AyurSaathi.png",
+    github: "https://github.com/xeylous/Ayur-Sathi",
+    site: "https://ayur-sathi.vercel.app/",
+  },
+  {
     title: "Elevate BPM",
     subtitle: "Featured Project",
     description:
