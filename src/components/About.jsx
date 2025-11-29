@@ -29,7 +29,7 @@ export default function AboutMe() {
           className=" inset-x-0 top-0  flex justify-center my-3.5  "
         >
           <Image
-            src="/Photo.jpg"
+            src="/Photo.png"
             alt="Apurv Sinha"
             width={250}
             height={100}
